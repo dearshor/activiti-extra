@@ -1,4 +1,19 @@
+# Java Files #
+target
 *.class
+
+# Eclipse Files #
+.classpath
+.project
+.settings
+
+# Activiti Files #
+.bpmn
+
+# OS Files #
+*~
+.ant_targets
+.DS_Store
 
 # Package Files #
 *.jar
