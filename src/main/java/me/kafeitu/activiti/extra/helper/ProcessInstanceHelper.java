@@ -11,13 +11,13 @@
  * limitations under the License.
  */
 
-package me.kafeitu.activiti.extra.util.runtime;
+package me.kafeitu.activiti.extra.helper;
 
 
 /**
- * Activiti Task Utils
+ * Process Instance Helper
  * @author henryyan
  */
-public class ActivitiTaskUtil {
-  
+public class ProcessInstanceHelper extends AbstractHelper {
+
 }
