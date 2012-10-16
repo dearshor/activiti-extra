@@ -51,3 +51,4 @@ RoadMap
 ========
 
 1. 发送邮件到yanhonglei[@]gmail.com申请参与
+2. 在邮件中写明自己参与过的项目，以及github账号
