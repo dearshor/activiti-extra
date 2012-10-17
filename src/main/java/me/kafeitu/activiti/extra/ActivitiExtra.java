@@ -13,6 +13,7 @@
 
 package me.kafeitu.activiti.extra;
 
+import me.kafeitu.activiti.extra.helper.ProcessDefinitionHelper;
 import me.kafeitu.activiti.extra.helper.ProcessInstanceHelper;
 import me.kafeitu.activiti.extra.helper.RuntimeTaskHelper;
 
@@ -24,6 +25,7 @@ public class ActivitiExtra {
   // HELPERS ///////////////////////////////////////////////////////////////////
   protected RuntimeTaskHelper runtimeTaskHelper;
   protected ProcessInstanceHelper processInstanceHelper;
+  protected ProcessDefinitionHelper processDefinitionHelper;
 
   protected ActivitiExtraConfiguration activitiExtraConfiguration;
 
@@ -31,6 +33,7 @@ public class ActivitiExtra {
     this.activitiExtraConfiguration = activitiExtraConfiguration;
     runtimeTaskHelper = activitiExtraConfiguration.getRuntimeTaskHelper();
     processInstanceHelper = activitiExtraConfiguration.getProcessInstanceHelper();
+    processDefinitionHelper = activitiExtraConfiguration.getProcessDefinitionHelper();
   }
 
   // getters and setters //////////////////////////////////////////////////////
@@ -41,6 +44,10 @@ public class ActivitiExtra {
 
   public ProcessInstanceHelper getProcessInstanceHelper() {
     return processInstanceHelper;
+  }
+
+  public ProcessDefinitionHelper getProcessDefinitionHelper() {
+    return processDefinitionHelper;
   }
 
 }

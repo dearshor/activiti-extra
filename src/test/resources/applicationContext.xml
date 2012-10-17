@@ -68,5 +68,6 @@
 	
 	<bean id="runtimeTaskHelper" factory-bean="activitiExtra" factory-method="getRuntimeTaskHelper" />
 	<bean id="processInstanceHelper" factory-bean="activitiExtra" factory-method="getProcessInstanceHelper" />
+	<bean id="processDefinitionHelper" factory-bean="activitiExtra" factory-method="getProcessDefinitionHelper" />
 
 </beans>
