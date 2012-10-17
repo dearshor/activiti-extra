@@ -30,6 +30,8 @@ import org.activiti.engine.TaskService;
  */
 public class ActivitiExtraConfiguration {
 
+  // ACTIVITI EXTRAS PROPERTIES //////////////////////////////////////////
+
   // ACTIVITI SERVICES ///////////////////////////////////////////////////
 
   protected RepositoryService repositoryService = null;
@@ -47,7 +49,7 @@ public class ActivitiExtraConfiguration {
   public ActivitiExtra buildActivitiExtra() {
     initRuntimeTaskHelper();
     initProcessInstanceHelper();
-
+    
     return new ActivitiExtra(this);
   }
 
@@ -140,6 +142,10 @@ public class ActivitiExtraConfiguration {
 
   public ProcessInstanceHelper getProcessInstanceHelper() {
     return processInstanceHelper;
+  }
+
+  public void setProcessInstanceHelper(ProcessInstanceHelper processInstanceHelper) {
+    this.processInstanceHelper = processInstanceHelper;
   }
 
 }

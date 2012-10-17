@@ -42,7 +42,11 @@ public class ActivitiExtraConfigurationTest extends SpringTransactionalTestCase 
 
   @Test
   public void activitiExtraConfigurationTest() {
+    
+    // base test
     assertNotNull(activitiExtraConfiguration);
+    
+    // activiti services assert
     assertNotNull(activitiExtraConfiguration.getFormService());
     assertNotNull(activitiExtraConfiguration.getHistoryService());
     assertNotNull(activitiExtraConfiguration.getIdentityService());
@@ -51,6 +55,7 @@ public class ActivitiExtraConfigurationTest extends SpringTransactionalTestCase 
     assertNotNull(activitiExtraConfiguration.getRuntimeService());
     assertNotNull(activitiExtraConfiguration.getTaskService());
     
+    // helper assert
     assertNotNull(runtimeTaskHelper);
     assertActivitiServiceInHelper(runtimeTaskHelper);
     
