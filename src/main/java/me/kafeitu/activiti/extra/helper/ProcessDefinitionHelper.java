@@ -39,7 +39,7 @@ public class ProcessDefinitionHelper extends AbstractHelper {
    *          流程定义的Key
    * @return Map<英文名称, 中文名称>
    */
-  public Map<String, String> getTaskKeysByProcessDefinitionKey(String processDefinitionKey) {
+  public Map<String, String> getUserTaskKeysByProcessDefinitionKey(String processDefinitionKey) {
     Map<String, String> keys = new HashMap<String, String>();
     List<ProcessDefinition> definitions = repositoryService.createProcessDefinitionQuery().processDefinitionKey(processDefinitionKey).list();
     for (ProcessDefinition processDefinition : definitions) {
@@ -55,11 +55,11 @@ public class ProcessDefinitionHelper extends AbstractHelper {
   /**
    * 读取流程中任务名称
    * 
-   * @param processDefinitionKey
-   *          流程定义的Key
+   * @param processDefinitionId
+   *          流程定义的ID
    * @return Map<英文名称, 中文名称>
    */
-  public Map<String, String> getTaskKeysByProcessDefinitionId(String processDefinitionId) {
+  public Map<String, String> getUserTaskKeysByProcessDefinitionId(String processDefinitionId) {
     Map<String, String> keys = new HashMap<String, String>();
     ProcessDefinitionEntity processDefinitionEntity = (ProcessDefinitionEntity) ((RepositoryServiceImpl) repositoryService)
             .getDeployedProcessDefinition(processDefinitionId);

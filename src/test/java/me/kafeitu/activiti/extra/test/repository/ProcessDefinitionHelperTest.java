@@ -52,15 +52,15 @@ public class ProcessDefinitionHelperTest extends AbstractJUnit4SpringContextTest
   }
 
   @Test
-  public void testTetTaskKeysByProcessDefinitionKey() throws Exception {
-    Map<String, String> keys = processDefinitionHelper.getTaskKeysByProcessDefinitionKey("AutoAssignee");
+  public void testUserTaskKeysByProcessDefinitionKey() throws Exception {
+    Map<String, String> keys = processDefinitionHelper.getUserTaskKeysByProcessDefinitionKey("AutoAssignee");
     assertUserTaskKeyAndName(keys);
   }
 
   @Test
-  public void testTetTaskKeysByProcessDefinitionId() throws Exception {
+  public void testUserTaskKeysByProcessDefinitionId() throws Exception {
     ProcessDefinition processDefinition = repositoryService.createProcessDefinitionQuery().latestVersion().singleResult();
-    Map<String, String> keys = processDefinitionHelper.getTaskKeysByProcessDefinitionId(processDefinition.getId());
+    Map<String, String> keys = processDefinitionHelper.getUserTaskKeysByProcessDefinitionId(processDefinition.getId());
 
     assertUserTaskKeyAndName(keys);
   }
